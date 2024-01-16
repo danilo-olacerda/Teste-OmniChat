@@ -1,0 +1,36 @@
+<section *ngIf="spinner" class="spinner-container">
+    <app-spinner></app-spinner>
+</section>
+
+<section *ngIf="!spinner" class="movie-container">
+    <div class="title-container">
+        <p class="movie-title">
+            {{ movie.title }}
+        </p>
+        <button class="back-button" routerLink="/">
+            Voltar
+        </button>
+    </div>
+
+    <section class="movie-details-container">
+        <img [src]="'https://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="movie image">
+        <p>
+            Ano de lançamento: {{ movie.release_date | date: 'YYYY' }}
+        </p>
+        <p>
+            Gêneros: {{ generateGenreString(movie.genres) }}
+        </p>
+        <p>
+            Sinopse: {{ movie.overview }}
+        </p>
+        <p>
+            Nota: {{ movie.vote_average }}
+        </p>
+        <p>
+            Popularidade: {{ movie.popularity }}
+        </p>
+        <p>
+            Quantidade de votos: {{ movie.vote_count }}
+        </p>
+    </section>
+</section>

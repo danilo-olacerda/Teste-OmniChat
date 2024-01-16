@@ -1,0 +1,33 @@
+<section>
+    <p class="text-suggestion">
+        Sugestões de filmes para você 
+        
+        @if (showFilters) {
+            <app-query-form (updateMovies)="getNewQueryMovies($event)" [queryForm]="queryForm" [genres]="genres"></app-query-form>
+        }
+
+        <button (click)="showFilters = !showFilters" >Filtros</button>
+    </p>
+
+    <section *ngIf="spinner" class="spinner-container">
+        <app-spinner></app-spinner>
+    </section>
+
+    <section *ngIf="!spinner" class="movies-container">
+        <div *ngFor="let movie of movies; let i = index" class="movie-card">
+            <h3>{{ movie.title }}</h3>
+            <p>{{ movie.release_date | date: 'YYYY' }}</p>
+            <p class="genres">{{ generateGenreString(movie.genre_ids) }}</p>
+            <img [src]="'https://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="movie image">
+            <div class="description-container">
+                <p class="description">{{ movie.overview }}</p>
+            </div>
+            <button (click)="redirectToMovieDetails(movie.id)">Ver mais</button>
+            <div *ngIf="i === movies.length - 1" #loadTrigger>
+                <section *ngIf="loadMoreSpinner" class="spinner-container">
+                    <app-spinner></app-spinner>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>

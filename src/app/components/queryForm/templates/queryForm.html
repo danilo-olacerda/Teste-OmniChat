@@ -1,0 +1,10 @@
+<section class="form-container">
+    <form [formGroup]="queryForm">
+        <ng-select class="ng-select" formControlName="with_genres" [multiple]="true" placeholder="Selecione os gêneros para filtragem" notFoundText="Gênero não encontrado">
+            <ng-option *ngFor="let genre of genres" [value]="genre.id">
+                {{ genre.name }}
+            </ng-option>
+        </ng-select>
+        <input type="text" formControlName="year" placeholder="Ano de lançamento">
+    </form>
+</section>

@@ -1,11 +1,13 @@
 import { HeaderComponent } from '../../app/components/header/components/header.component';
+import { AppModule } from '../../app/modules/app.module';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 describe('HeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent],
+      declarations: [HeaderComponent],
+      imports: [AppModule],
     }).compileComponents();
   });
 
@@ -26,8 +28,11 @@ describe('HeaderComponent', () => {
     it('should have a link to home', () => {
         const fixture = TestBed.createComponent(HeaderComponent);
     
-        const link = fixture.debugElement.query(By.css('p'));
-    
-        expect(link.nativeElement.getAttribute('ng-reflect-router-link')).toBe('/');
+        fixture.detectChanges();
+        const link = fixture.debugElement.query(By.css('p[routerLink="/"]'));
+
+        expect(link).toBeTruthy();
     });
 });
+
+

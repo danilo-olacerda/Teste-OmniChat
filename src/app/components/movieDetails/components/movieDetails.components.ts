@@ -57,12 +57,12 @@ export class MovieDetailsComponent {
             this.genres = response.genres;
         }
 
-        this.route.params.subscribe(params => {
+        this.route.params.subscribe(async (params) => {
             const id = params['id'];
 
             if (id) {
                 this.id = id;
-                this.getMovie();
+                await this.getMovie();
             }
         });
     }

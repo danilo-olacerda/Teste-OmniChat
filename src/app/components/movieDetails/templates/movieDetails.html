@@ -14,22 +14,22 @@
 
     <section class="movie-details-container">
         <img [src]="'https://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="movie image">
-        <p>
+        <p class="movie-release-date">
             Ano de lançamento: {{ movie.release_date | date: 'YYYY' }}
         </p>
-        <p>
+        <p class="movie-genres">
             Gêneros: {{ generateGenreString(movie.genres) }}
         </p>
-        <p>
+        <p class="movie-overview">
             Sinopse: {{ movie.overview }}
         </p>
-        <p>
+        <p class="movie-score">
             Nota: {{ movie.vote_average }}
         </p>
-        <p>
+        <p class="movie-popularity">
             Popularidade: {{ movie.popularity }}
         </p>
-        <p>
+        <p class="movie-vote-count">
             Quantidade de votos: {{ movie.vote_count }}
         </p>
     </section>

@@ -2,10 +2,10 @@ import { QueryFormComponent } from '../../app/components/queryForm/components/qu
 import { SpinnerComponent } from '../../app/components/spinner/components/spinner.component';
 import { HomeComponent } from '../../app/components/home/components/home.component';
 import { WebService } from '../../app/services/webService.service';
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { AppModule } from '../../app/modules/app.module';
 import { NgSelectComponent } from '@ng-select/ng-select';
 import Movie from '../../app/models/movie.model';
-import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 describe('HomeComponent', () => {

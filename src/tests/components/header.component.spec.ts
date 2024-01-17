@@ -25,14 +25,12 @@ describe('HeaderComponent', () => {
     expect(title.nativeElement.textContent).toContain('Movie Finder');
   });
 
-    it('should have a link to home', () => {
-        const fixture = TestBed.createComponent(HeaderComponent);
-    
-        fixture.detectChanges();
-        const link = fixture.debugElement.query(By.css('p[routerLink="/"]'));
+  it('should have a link to home', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
 
-        expect(link).toBeTruthy();
-    });
+    fixture.detectChanges();
+    const link = fixture.debugElement.query(By.css('p[routerLink="/"]'));
+
+    expect(link).toBeTruthy();
+  });
 });
-
-

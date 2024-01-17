@@ -13,7 +13,7 @@
         <app-spinner></app-spinner>
     </section>
 
-    <section *ngIf="!spinner" class="movies-container">
+    <section *ngIf="!spinner && movies && movies.length" class="movies-container">
         <div *ngFor="let movie of movies; let i = index" class="movie-card">
             <h3>{{ movie.title }}</h3>
             <p>{{ movie.release_date | date: 'YYYY' }}</p>
@@ -29,5 +29,9 @@
                 </section>
             </div>
         </div>
+    </section>
+
+    <section *ngIf="!spinner && !movies.length" class="movies-container">
+        <h3>Nenhum filme encontrado. Tente novamente com outros filtros</h3>
     </section>
 </section>

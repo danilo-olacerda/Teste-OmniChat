@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styles: [`
     .container 
         width: 100%
-        background-color: #e3d9d8
+        background-color: #dadee3
         overflow: hidden
         height: 50px
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)

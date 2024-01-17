@@ -10,6 +10,10 @@ Este é um projeto para o teste técnico da OmniChat.
 
 O [Movie Finder](teste-omni-chat.vercel.app) consiste em uma lista de sugestão de filmes, que por sua vez podem ser filtrados pelos seus gêneros favoritos e até mesmo pelo seu ano de lançamento. Dessa forma caso você queira uma recomendação de um filme de comédia dos anos 2000, basta entrar no Movie Finder e selecionar o gênero e ano de lançamento, dessa forma você vai ter várias opções para escolher, e caso se interesse por algum título, você pode ainda navegar até a página com mais informações do filme apertando no botão de "Ver Mais".
 
+A API que foi escolhida para ser consultada foi a [The Movie DB](https://developer.themoviedb.org/reference/intro/getting-started), onde são feitas requisições de recomendações de filmes, lista de gêneros e detalhes de um filme específico.
+
+Quanto a tecnologia do Angular 17 utilizada, no componente de Home, foi utilizado uma alternativa ao *ngIf para a renderização do componente queryForm, utilizando assim uma condição @if.
+
 ***
 
 ## :computer:	 Tecnologias e Conceitos

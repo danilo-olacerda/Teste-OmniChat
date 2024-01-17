@@ -4,12 +4,6 @@
    <img src="https://static.vecteezy.com/system/resources/previews/010/286/336/original/realistic-open-movie-clapper-open-isolated-on-transparent-background-shown-slate-board-png.png"/>
 </p>
 
-<p align = "center">
-   <img src="https://img.shields.io/badge/danilo-olacerda?style=flat-square" />
-   <img src="https://img.shields.io/github/languages/count/danilo-olacerda/Teste-OmniChat?color=4dae71&style=flat-square" />
-</p>
-
-
 ##  :clipboard: Descrição
 
 Este é um projeto para o teste técnico da OmniChat.
